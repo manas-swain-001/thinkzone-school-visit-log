@@ -1,0 +1,53 @@
+[
+  {
+    "year": 2026,
+    "month": 7,
+    "title": "July 2026 school visit",
+    "questions": [
+      {"questionId": "JUL26-Q01", "text": "Was the head teacher present?", "type": "yesNo"},
+      {"questionId": "JUL26-Q02", "text": "How many teachers were present?", "type": "number", "min": 0, "max": 50},
+      {"questionId": "JUL26-Q03", "text": "How many students were present in Class 1 to 3?", "type": "number", "min": 0, "max": 500},
+      {"questionId": "JUL26-Q04", "text": "Was the classroom clean and ready for teaching?", "type": "singleChoice", "options": ["Yes", "Partly", "No"]},
+      {"questionId": "JUL26-Q05", "text": "Was the timetable displayed in the classroom?", "type": "yesNo"},
+      {"questionId": "JUL26-Q06", "text": "Were teaching-learning materials (TLM) used during the lesson?", "type": "yesNo"},
+      {"questionId": "JUL26-Q07", "text": "Which subject was being taught when you arrived?", "type": "singleChoice", "options": ["Odia", "Mathematics", "English", "Environmental Studies", "Other"]},
+      {"questionId": "JUL26-Q08", "text": "Was the mid-day meal served on time?", "type": "yesNo"},
+      {"questionId": "JUL26-Q09", "text": "Condition of drinking water facility", "type": "singleChoice", "options": ["Good", "Needs repair", "Not available"]},
+      {"questionId": "JUL26-Q10", "text": "Any remarks", "type": "text", "maxLength": 300, "optional": true}
+    ]
+  },
+  {
+    "year": 2026,
+    "month": 8,
+    "title": "August 2026 school visit",
+    "questions": [
+      {"questionId": "AUG26-Q01", "text": "Was the head teacher present?", "type": "yesNo"},
+      {"questionId": "AUG26-Q02", "text": "How many teachers were present?", "type": "number", "min": 0, "max": 50},
+      {"questionId": "AUG26-Q03", "text": "How many students were present in Class 1 to 3?", "type": "number", "min": 0, "max": 500},
+      {"questionId": "AUG26-Q04", "text": "Were the foundational learning workbooks available with every student?", "type": "yesNo"},
+      {"questionId": "AUG26-Q05", "text": "How many students could read a short paragraph aloud? (sample of 5)", "type": "singleChoice", "options": ["0", "1-2", "3-4", "All 5"]},
+      {"questionId": "AUG26-Q06", "text": "How many students could solve a two-digit addition? (sample of 5)", "type": "singleChoice", "options": ["0", "1-2", "3-4", "All 5"]},
+      {"questionId": "AUG26-Q07", "text": "Was the school library or reading corner in use?", "type": "yesNo"},
+      {"questionId": "AUG26-Q08", "text": "Did the teacher maintain the student assessment register?", "type": "yesNo"},
+      {"questionId": "AUG26-Q09", "text": "Condition of toilets", "type": "singleChoice", "options": ["Good", "Needs repair", "Not usable"]},
+      {"questionId": "AUG26-Q10", "text": "Support the school needs from the cluster or block", "type": "text", "maxLength": 300, "optional": true}
+    ]
+  },
+  {
+    "year": 2026,
+    "month": 9,
+    "title": "September 2026 school visit",
+    "questions": [
+      {"questionId": "SEP26-Q01", "text": "Was the head teacher present?", "type": "yesNo"},
+      {"questionId": "SEP26-Q02", "text": "How many teachers were present?", "type": "number", "min": 0, "max": 50},
+      {"questionId": "SEP26-Q03", "text": "How many students were present in Class 1 to 3?", "type": "number", "min": 0, "max": 500},
+      {"questionId": "SEP26-Q04", "text": "Was a lesson plan available for the class being observed?", "type": "yesNo"},
+      {"questionId": "SEP26-Q05", "text": "How actively were students taking part in the lesson?", "type": "singleChoice", "options": ["Most students", "About half", "Few students"]},
+      {"questionId": "SEP26-Q06", "text": "Did the teacher use group or pair activities?", "type": "yesNo"},
+      {"questionId": "SEP26-Q07", "text": "How many students were given individual attention during the observation?", "type": "number", "min": 0, "max": 100},
+      {"questionId": "SEP26-Q08", "text": "Was the last parent-teacher meeting held this month?", "type": "yesNo"},
+      {"questionId": "SEP26-Q09", "text": "Overall rating of the visit", "type": "singleChoice", "options": ["Excellent", "Good", "Average", "Poor"]},
+      {"questionId": "SEP26-Q10", "text": "Any remarks", "type": "text", "maxLength": 300, "optional": true}
+    ]
+  }
+]

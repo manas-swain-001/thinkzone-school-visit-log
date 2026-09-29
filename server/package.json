@@ -1,0 +1,27 @@
+{
+  "name": "visit-log-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "School Visit Log API - Express + Mongoose",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "import:schools": "node src/scripts/importSchools.js",
+    "seed": "node src/scripts/seed.js",
+    "indexes": "node src/scripts/syncIndexes.js",
+    "test": "node --test \"tests/*.test.js\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "joi": "^17.13.3",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0"
+  }
+}
