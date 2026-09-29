@@ -110,10 +110,14 @@ export function markRetryLater(clientId: string): Promise<void> {
   });
 }
 
-/** Clears the backoff so a "Retry now" tap goes out immediately. */
+/** Clears the backoff so a retry goes out immediately. */
 export function resetBackoff(): Promise<void> {
   return mutate((draft) =>
-    draft.map((visit) => (visit.status === 'pending' ? { ...visit, nextAttemptAt: null } : visit))
+    draft.map((visit) =>
+      visit.status === 'pending'
+        ? { ...visit, attempts: 0, nextAttemptAt: null }
+        : visit
+    )
   );
 }
 
@@ -158,15 +162,18 @@ export function mergeServerVisits(serverVisits: ServerVisit[]): Promise<void> {
   });
 }
 
-export function pendingFor(userId: string): LocalVisit[] {
+export function pendingFor(userId: string, ignoreBackoff: boolean = false): LocalVisit[] {
   const now = Date.now();
   return cache.filter(
-    (visit) => visit.userId === userId && visit.status === 'pending' && isDue(visit, now)
+    (visit) =>
+      visit.userId === userId &&
+      visit.status === 'pending' &&
+      (ignoreBackoff || isDue(visit, now))
   );
 }
 
 export function hasDuePending(userId: string): boolean {
-  return pendingFor(userId).length > 0;
+  return pendingFor(userId, false).length > 0;
 }
 
 /** Removes a Failed visit from the device after the user dismisses it. */

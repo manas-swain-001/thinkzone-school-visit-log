@@ -1,4 +1,5 @@
-import { FlatList, Modal, Pressable, StyleSheet, Text, View } from 'react-native';
+import { useState, useMemo } from 'react';
+import { FlatList, Modal, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import { colors, radius, spacing, typography } from '@/theme';
 
@@ -7,6 +8,7 @@ export type PickerOption = { value: string; label: string; sublabel?: string | n
 type Props = {
   visible: boolean;
   title: string;
+  allLabel?: string;
   options: PickerOption[];
   selected: string | null;
   onSelect: (value: string | null) => void;
@@ -14,22 +16,62 @@ type Props = {
 };
 
 /** A modal list used for the district and block pickers. */
-export function PickerSheet({ visible, title, options, selected, onSelect, onClose }: Props) {
+export function PickerSheet({
+  visible,
+  title,
+  allLabel = 'All',
+  options,
+  selected,
+  onSelect,
+  onClose,
+}: Props) {
+  const [filterText, setFilterText] = useState('');
+
+  const filteredOptions = useMemo(() => {
+    const q = filterText.trim().toLowerCase();
+    if (!q) return options;
+    return options.filter(
+      (opt) =>
+        opt.label.toLowerCase().includes(q) ||
+        (opt.sublabel && opt.sublabel.toLowerCase().includes(q))
+    );
+  }, [options, filterText]);
+
+  const handleClose = () => {
+    setFilterText('');
+    onClose();
+  };
+
   return (
-    <Modal visible={visible} animationType="slide" transparent onRequestClose={onClose}>
+    <Modal visible={visible} animationType="slide" transparent onRequestClose={handleClose}>
       <View style={styles.backdrop}>
-        <Pressable style={styles.backdropTap} onPress={onClose} accessibilityLabel="Close" />
+        <Pressable style={styles.backdropTap} onPress={handleClose} accessibilityLabel="Close" />
 
         <View style={styles.sheet}>
           <View style={styles.header}>
             <Text style={styles.title}>{title}</Text>
-            <Pressable onPress={onClose} hitSlop={10}>
-              <Text style={styles.close}>Close</Text>
+            <Pressable onPress={handleClose} hitSlop={10}>
+              <Text style={styles.close}>Done</Text>
             </Pressable>
           </View>
 
+          {options.length > 6 ? (
+            <View style={styles.searchWrapper}>
+              <TextInput
+                style={styles.searchInput}
+                value={filterText}
+                onChangeText={setFilterText}
+                placeholder="Search..."
+                placeholderTextColor={colors.textFaint}
+                autoCorrect={false}
+                autoCapitalize="none"
+                clearButtonMode="while-editing"
+              />
+            </View>
+          ) : null}
+
           <FlatList
-            data={[{ value: '', label: 'All', sublabel: null }, ...options]}
+            data={[{ value: '', label: allLabel, sublabel: null }, ...filteredOptions]}
             keyExtractor={(item) => item.value || 'all'}
             keyboardShouldPersistTaps="handled"
             renderItem={({ item }) => {
@@ -40,7 +82,7 @@ export function PickerSheet({ visible, title, options, selected, onSelect, onClo
                   accessibilityState={{ selected: isSelected }}
                   onPress={() => {
                     onSelect(item.value === '' ? null : item.value);
-                    onClose();
+                    handleClose();
                   }}
                   style={({ pressed }) => [
                     styles.row,
@@ -85,6 +127,21 @@ const styles = StyleSheet.create({
   },
   title: { ...typography.heading, color: colors.text },
   close: { ...typography.label, color: colors.primary },
+  searchWrapper: {
+    paddingHorizontal: spacing.lg,
+    paddingVertical: spacing.sm,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
+  },
+  searchInput: {
+    height: 40,
+    backgroundColor: '#F0F4F8',
+    borderRadius: radius.sm,
+    paddingHorizontal: spacing.md,
+    ...typography.body,
+    fontSize: 14,
+    color: colors.text,
+  },
   row: {
     flexDirection: 'row',
     alignItems: 'center',

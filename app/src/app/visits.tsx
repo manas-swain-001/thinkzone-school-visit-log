@@ -98,15 +98,15 @@ export default function MyVisitsScreen() {
                 label={isSyncing ? 'Syncing…' : 'Sync now'}
                 variant="secondary"
                 busy={isSyncing}
-                disabled={!isOnline}
-                onPress={() => void sync()}
+                disabled={isSyncing}
+                onPress={() => void sync({ force: true })}
                 style={styles.actionButton}
               />
               {counts.failed > 0 ? (
                 <Button
                   label="Retry failed"
                   variant="secondary"
-                  disabled={!isOnline}
+                  disabled={isSyncing}
                   onPress={() => void retryFailed()}
                   style={styles.actionButton}
                 />

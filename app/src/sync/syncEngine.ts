@@ -7,6 +7,7 @@ import {
   markSynced,
   mergeServerVisits,
   pendingFor,
+  resetBackoff,
 } from './queue';
 import type { LocalVisit } from './types';
 
@@ -21,7 +22,7 @@ export type SyncResult = {
   reason?: string;
 };
 
-type SyncOptions = { userId: string; pull?: boolean };
+type SyncOptions = { userId: string; pull?: boolean; force?: boolean };
 
 /**
  * Only one sync may be in flight at a time, app-wide.
@@ -61,8 +62,11 @@ export function syncNow(options: SyncOptions): Promise<SyncResult> {
   return run;
 }
 
-async function runSync({ userId, pull = true }: SyncOptions): Promise<SyncResult> {
-  const queued = pendingFor(userId);
+async function runSync({ userId, pull = true, force = false }: SyncOptions): Promise<SyncResult> {
+  if (force) {
+    await resetBackoff();
+  }
+  const queued = pendingFor(userId, force);
 
   const result: SyncResult = {
     attempted: queued.length,

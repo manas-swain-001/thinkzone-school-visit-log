@@ -1,10 +1,10 @@
-import { Link } from 'expo-router';
+import { Link, type Href } from 'expo-router';
 import { Pressable, StyleSheet, Text } from 'react-native';
 
 import { colors, typography } from '@/theme';
 
 type Props = {
-  href: string;
+  href: Href;
   label: string;
 };
 

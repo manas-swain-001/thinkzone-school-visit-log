@@ -34,7 +34,7 @@ type VisitsContextValue = {
   isSyncing: boolean;
   lastResult: SyncResult | null;
   enqueue: (input: NewLocalVisit) => Promise<void>;
-  sync: (options?: { pull?: boolean }) => Promise<SyncResult>;
+  sync: (options?: { pull?: boolean; force?: boolean }) => Promise<SyncResult>;
   retryFailed: () => Promise<void>;
   discard: (clientId: string) => Promise<void>;
 };
@@ -69,13 +69,20 @@ export function VisitsProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const sync = useCallback(
-    async (options?: { pull?: boolean }) => {
+    async (options?: { pull?: boolean; force?: boolean }) => {
       if (!user) {
         return emptyResult();
       }
       setIsSyncing(true);
       try {
-        const result = await runSync({ userId: user.userId, pull: options?.pull ?? true });
+        if (options?.force) {
+          await resetBackoff();
+        }
+        const result = await runSync({
+          userId: user.userId,
+          pull: options?.pull ?? true,
+          force: options?.force ?? false,
+        });
         setLastResult(result);
         return result;
       } finally {
@@ -91,14 +98,16 @@ export function VisitsProvider({ children }: { children: ReactNode }) {
     if (!user || !ready || !isOnline) return;
     if (launchedFor.current === user.userId) return;
     launchedFor.current = user.userId;
-    void sync();
+    void sync({ force: true });
   }, [user, ready, isOnline, sync]);
 
   // Trigger 2: the network came back. The demo turns airplane mode off without
   // touching the app, so this transition is the only signal there is.
   const wasOnline = useRef(isOnline);
   useEffect(() => {
-    if (isOnline && !wasOnline.current && user) void sync();
+    if (isOnline && !wasOnline.current && user) {
+      void sync({ force: true });
+    }
     wasOnline.current = isOnline;
   }, [isOnline, user, sync]);
 
@@ -119,14 +128,14 @@ export function VisitsProvider({ children }: { children: ReactNode }) {
       // visit exists on disk before any request is made, so a failure - or a
       // process death - during the send can never lose it.
       await enqueueVisit(input);
-      if (isOnline) void sync();
+      if (isOnline) void sync({ force: true });
     },
     [isOnline, sync]
   );
 
   const retryFailed = useCallback(async () => {
     await resetBackoff();
-    await sync();
+    await sync({ force: true });
   }, [sync]);
 
   const discard = useCallback((clientId: string) => discardVisit(clientId), []);

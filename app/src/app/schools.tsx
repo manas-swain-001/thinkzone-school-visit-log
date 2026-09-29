@@ -96,14 +96,21 @@ export default function SelectSchoolScreen() {
         <FilterChip
           label="District"
           value={districtName(districtCode)}
-          placeholder="All districts"
+          placeholder="All Districts"
           onPress={() => setOpenPicker('district')}
         />
         <FilterChip
           label="Block"
           value={blockOptions.find((block) => block.value === blockCode)?.label ?? null}
-          placeholder={districtCode ? 'All blocks' : 'Pick a district'}
-          onPress={() => setOpenPicker('block')}
+          placeholder={districtCode ? 'All Blocks' : 'Select District first'}
+          disabled={!districtCode}
+          onPress={() => {
+            if (!districtCode) {
+              setOpenPicker('district');
+            } else {
+              setOpenPicker('block');
+            }
+          }}
         />
       </View>
 
@@ -236,7 +243,8 @@ export default function SelectSchoolScreen() {
 
       <PickerSheet
         visible={openPicker === 'district'}
-        title="District"
+        title="Select District"
+        allLabel="All Districts"
         options={districtOptions}
         selected={districtCode}
         onSelect={changeDistrict}
@@ -244,7 +252,8 @@ export default function SelectSchoolScreen() {
       />
       <PickerSheet
         visible={openPicker === 'block'}
-        title={districtCode ? `Blocks in ${districtName(districtCode)}` : 'Pick a district first'}
+        title={districtCode ? `Select Block (${districtName(districtCode)})` : 'Select District First'}
+        allLabel="All Blocks"
         options={blockOptions}
         selected={blockCode}
         onSelect={setBlockCode}
