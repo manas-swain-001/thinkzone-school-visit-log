@@ -44,12 +44,14 @@ export function validateAnswers(answers, questionnaire) {
     }
   }
 
-  // Every question without "optional": true must be answered.
+  // Every question without "optional": true must be answered. The message
+  // carries the questionId as well as the text, so the app can map the error
+  // back to the right input without having to look the id up itself.
   for (const question of questionnaire.questions) {
     if (!question.optional && !answered.has(question.questionId)) {
       errors.push({
         field: `answers.${question.questionId}`,
-        message: `"${question.text}" is required.`,
+        message: `"${question.questionId}" is required: "${question.text}".`,
       });
     }
   }
