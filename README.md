@@ -15,97 +15,113 @@ The mobile app enables field coordinators to record comprehensive school visits 
 
 ## 1. System Requirements & Prerequisites
 
-| Tool | Version Tested | Minimum Required | Notes |
+| Tool | Tested Version | Minimum Required | Purpose |
 | :--- | :--- | :--- | :--- |
-| **Node.js** | `v22.13.1` | `18.0.0+` | ESM support enabled |
-| **npm** | `v10.9.2` | `9.0.0+` | Bundled with Node |
-| **MongoDB Server** | `v8.3.4` | `6.0.0+` | Running locally or via Docker (`127.0.0.1:27017`) |
-| **MongoDB Database Tools** | `v100.19.0` | `100.0+` | Provides `mongorestore` and `mongodump` |
-| **Android Device / Emulator** | Android 10+ | Android 8+ | Expo Go app installed (or Android SDK emulator) |
+| **Node.js** | `v22.13.1` | `18.0.0+` | Backend API & Metro Bundler runtime |
+| **npm** | `v10.9.2` | `9.0.0+` | Package manager |
+| **MongoDB Server** | `v8.3.4` | `6.0.0+` | Running locally on `127.0.0.1:27017` |
+| **MongoDB Database Tools** | `v100.19.0` | `100.0+` | Provides `mongorestore` & `mongodump` |
+| **Android Device or Emulator** | Android 10+ | Android 8+ | Expo Go app installed (or Android SDK emulator) |
 
-> **Note on MongoDB**: Run MongoDB locally or in Docker. Do **not** use MongoDB Atlas or hosted clusters, as the evaluation environment runs offline/local network tests.
+> ⚠️ **Important**: Run MongoDB locally or via Docker. Do **not** use MongoDB Atlas or hosted clusters, as evaluation includes offline network testing.
 
 ---
 
-## 2. Quick Start: Fresh Clone to Running
+## 2. Step-by-Step Setup & Execution Guide
 
-### Step 1: Database Setup (Choose A or B)
+Follow these steps in order to set up, run, and evaluate the entire project from a fresh clone.
 
-Make sure your MongoDB instance is running locally on port `27017`.
+### Step 1: Database Setup
 
-#### Option A: Instant Restore from Dump (~3 seconds) — Recommended
-A clean database archive is pre-packaged in `/dump`:
+Ensure your local MongoDB service is running on `mongodb://127.0.0.1:27017`.
+
+Choose either **Option A** (Instant restore) or **Option B** (Run scripts from scratch):
+
+#### Option A: Instant Database Restore (~3 seconds) — Recommended
+A pre-packaged, validated database dump is included in the `/dump` directory:
 ```bash
-# From the project root:
+# Run from the repository root:
 mongorestore --gzip --archive=dump/visit_log.archive.gz --drop
 ```
+*This instantly restores 52,989 schools, 3 monthly questionnaires, 3 demo users, and all required indexes into the `visit_log` database.*
 
-#### Option B: Run Import and Seed Scripts from Scratch (~50 seconds)
+#### Option B: Run Import and Seed Scripts (~50 seconds)
 ```bash
 cd server
 npm install
 npm run import:schools       # Cleans and upserts 52,989 schools from data/schools.json
 npm run seed                 # Seeds questionnaires (Jul-Sep 2026) and 3 demo users
-npm run indexes              # Ensures all compound and unique indexes exist
+npm run indexes              # Creates every compound and unique index
 ```
 
 ---
 
-### Step 2: Start the Backend API
+### Step 2: Start the Backend API (Terminal 1)
 
-1. Navigate to the `server` folder:
+1. Open **Terminal 1** and navigate to the `server` directory:
    ```bash
    cd server
    npm install
    ```
 
-2. Configure environment variables:
+2. Initialize your `.env` configuration:
    ```bash
-   # Linux/macOS:
+   # Linux / macOS:
    cp .env.example .env
 
    # Windows PowerShell:
    Copy-Item .env.example .env
    ```
-   *The default configuration (`PORT=3000`, `HOST=0.0.0.0`, `MONGODB_URI=mongodb://127.0.0.1:27017/visit_log`) works out of the box.*
+   *The default configuration (`PORT=3000`, `HOST=0.0.0.0`, `MONGODB_URI=mongodb://127.0.0.1:27017/visit_log`) works immediately without modification.*
 
 3. Start the server:
    ```bash
    npm start
    ```
-   *The API will start on `http://0.0.0.0:3000`.*
+   *Expected output:*
+   ```text
+   connected to MongoDB
+   API listening on http://0.0.0.0:3000
+   For the phone, use this machine's LAN IP, not 127.0.0.1.
+   ```
 
-4. Verify server health in another terminal:
+4. Verify server health:
    ```bash
    curl http://localhost:3000/api/health
    ```
-   Expected response:
+   *Expected response:*
    ```json
-   { "status": "ok", "database": "connected", "time": "2026-09-29T..." }
+   {
+     "status": "ok",
+     "database": "connected",
+     "time": "2026-09-29T..."
+   }
    ```
 
 ---
 
-### Step 3: Run Backend Automated Tests
+### Step 3: Run Automated Backend Tests (Terminal 2)
 
-Run the full suite of unit and integration tests (no active database connection required):
-```bash
-cd server
-npm test
-```
-*Result: **34/34 tests pass** (IST time calculation, answer validation, whitespace cleaning, and idempotency logic).*
+Open **Terminal 2** to run the test suites:
 
-To run the live end-to-end HTTP smoke test against the running API:
-```bash
-npm run smoke
-```
-*Tests live school pagination, questionnaire retrieval, 8-request concurrent idempotency race, validation rejections, and block summary aggregation in under 1 second.*
+1. **Unit & Integration Test Suite** (Runs in ~1s, no database required):
+   ```bash
+   cd server
+   npm test
+   ```
+   *Result:* **All 34 unit tests pass** (IST month calculations, date conversions, questionnaire answer validation, whitespace trimming, and error formatting).
+
+2. **Live HTTP Smoke Test** (Tests running API against live MongoDB):
+   ```bash
+   npm run smoke
+   ```
+   *Result:* Validates health probe, school pagination, current IST questionnaire, 8-request concurrent idempotency race, 422 rejections, visit timeline, and block summary aggregation in under 1 second.
 
 ---
 
-### Step 4: Start the Mobile Application (Expo)
+### Step 4: Start the Mobile Application (Terminal 2)
 
-1. Open a new terminal and navigate to the `app` folder:
+1. Navigate to the `app` directory:
    ```bash
    cd app
    npm install
@@ -113,36 +129,46 @@ npm run smoke
 
 2. Set your machine's local Wi-Fi / LAN IP in `app/.env`:
    ```bash
+   # Linux / macOS:
+   cp .env.example .env
+
    # Windows PowerShell:
    Copy-Item .env.example .env
    ```
-   Open `app/.env` and ensure `EXPO_PUBLIC_API_BASE_URL` points to your machine's LAN IP:
+
+   Find your computer's IP address:
+   - **Windows**: run `ipconfig` (look for *IPv4 Address* under your active Wi-Fi or Ethernet adapter, e.g., `192.168.1.131`).
+   - **macOS / Linux**: run `ifconfig` or `ip a` (look for `inet` under `en0` or `wlan0`).
+
+   Set `app/.env`:
    ```env
    EXPO_PUBLIC_API_BASE_URL=http://<YOUR_LAN_IP>:3000
    ```
-   *(Example: `http://192.168.1.131:3000`. For Android Emulator on the same computer, use `http://10.0.2.2:3000`)*.
+   *(For Android Emulator running on the same PC, you can use `http://10.0.2.2:3000`)*.
 
 3. Start the Expo development server:
    ```bash
    npm start
+   # or with cache cleared:
+   npx expo start -c
    ```
 
-4. Launch on your device:
+4. Launch the application:
    - **Android Emulator**: Press **`a`** in the Expo terminal.
-   - **Physical Android Phone**: Install **Expo Go** from Google Play, ensure your phone is connected to the same Wi-Fi network as your computer, and scan the terminal QR code (or enter `exp://<YOUR_LAN_IP>:8081`).
+   - **Physical Android Phone**: Install **Expo Go** from Google Play, connect your phone to the same Wi-Fi network, and scan the QR code displayed in the terminal (or enter `exp://<YOUR_LAN_IP>:8081`).
 
-> **In-App Dynamic IP Switcher**: You can also verify or update the API URL directly inside the running app at any time by tapping **Settings** in the top-right header, editing the **API address**, and tapping **Test** & **Save and sync**.
+> 💡 **In-App Dynamic IP Configurator**: If your Wi-Fi IP changes, you don't need to rebuild or restart! Open the app, tap **Settings** in the top-right header, enter the new API URL, and tap **Test** -> **Save and sync**.
 
 ---
 
-## 3. End-to-End Live Demo Walkthrough
+## 3. End-to-End Live Evaluation Walkthrough
 
-Follow these 8 steps in order to demonstrate and evaluate the full functionality:
+Follow these 8 steps in order to demonstrate and evaluate the full offline-first functionality:
 
 | Step | Action | Expected Result |
 | :--- | :--- | :--- |
-| **1. Questions from DB** | Open the app, select user **Asha Patra (`U1001`)**, select any school, and open the Visit Form. | The form renders 10 dynamic questions fetched directly from MongoDB for the current IST month (`September 2026`). |
-| **2. Offline Persistence** | Turn on **Airplane Mode** on the phone. Force-close the app completely and reopen it. Tap the same school. | The form opens immediately offline with all questions intact from local device cache. |
+| **1. Questions from DB** | Open the app, choose user **Asha Patra (`U1001`)**, select any school, and open the Visit Form. | The form renders 10 dynamic questions fetched directly from MongoDB for the current IST month (`September 2026`). |
+| **2. Offline Persistence** | Turn on **Airplane Mode** on your phone. Force-close the app completely and reopen it. Select a school. | The form opens immediately offline with all questions intact from local device cache. |
 | **3. Submit Visits Offline** | In Airplane Mode, fill out the form and tap **Submit visit**. Repeat for 1–2 other schools. Open **My Visits**. | All submitted visits appear immediately with **`Pending`** status pills and display their client IDs. |
 | **4. Verify Zero Server Records** | Open MongoDB Compass or `mongosh` and inspect the `visits` collection: `db.visits.find()` | None of the offline visits exist on the server yet. |
 | **5. Automatic Reconnection Sync** | Turn off Airplane Mode without touching the app. | The app detects network restoration immediately, clears backoff, and automatically synchronizes all pending visits. Status pills change to **`Synced`**. |
@@ -152,7 +178,7 @@ Follow these 8 steps in order to demonstrate and evaluate the full functionality
 
 ---
 
-## 4. API Endpoints
+## 4. API Endpoints Reference
 
 All responses and errors follow a strict, unified envelope format:
 
@@ -161,11 +187,11 @@ All responses and errors follow a strict, unified envelope format:
 
 | Method | Path | Query / Body Params | Status | Purpose |
 | :--- | :--- | :--- | :--- | :--- |
-| **GET** | `/api/health` | None | `200` | Liveness and database connectivity probe. |
+| **GET** | `/api/health` | None | `200` | Liveness probe and database connectivity check. |
 | **GET** | `/api/schools` | `districtCode`, `blockCode`, `search`, `page`, `limit` | `200`, `400` | Search schools by name or UDISE prefix with pagination (max limit 100). |
 | **GET** | `/api/questionnaires/current` | None | `200`, `404` | Returns dynamic questionnaire for the server's current IST month. |
 | **POST** | `/api/visits` | `{ clientId, userId, udiseCode, visitedAt, answers: [...] }` | `201`, `200`, `400`, `422` | **Idempotent visit creation**. Returns `201` for new visits; `200` for replayed `clientId`. |
-| **GET** | `/api/visits` | `userId` (required), `year`, `month`, `page`, `limit` | `200`, `400` | User timeline sorted newest first (`visitedAt: -1`). |
+| **GET** | `/api/visits` | `userId` (required), `year`, `month`, `page`, `limit` | `200`, `400` | User visit timeline sorted newest first (`visitedAt: -1`). |
 | **GET** | `/api/reports/block-summary` | `districtCode`, `month`, `year` (all required) | `200`, `400`, `422` | Aggregated block coverage report with district totals. |
 
 ### Handled `422 Unprocessable Entity` Codes:
