@@ -38,8 +38,10 @@ export async function listSchools({
     ];
   }
 
-  // Only the fields a list screen needs, per the brief.
+  // Only the fields a list screen needs, per the brief. _id has to be
+  // excluded explicitly: Mongo includes it in every projection by default.
   const projection = {
+    _id: 0,
     udiseCode: 1,
     schoolName: 1,
     clusterName: 1,
