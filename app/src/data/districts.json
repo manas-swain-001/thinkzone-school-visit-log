@@ -1,0 +1,1446 @@
+[
+  {
+    "districtCode": "2101",
+    "districtName": "BARAGARH",
+    "blocks": [
+      {
+        "blockCode": "210101",
+        "blockName": "AMBABHONA"
+      },
+      {
+        "blockCode": "210102",
+        "blockName": "ATTABIRA"
+      },
+      {
+        "blockCode": "210103",
+        "blockName": "BARGARH"
+      },
+      {
+        "blockCode": "210104",
+        "blockName": "BARPALI"
+      },
+      {
+        "blockCode": "210105",
+        "blockName": "BHATALI"
+      },
+      {
+        "blockCode": "210106",
+        "blockName": "BHEDEN"
+      },
+      {
+        "blockCode": "210107",
+        "blockName": "BIJEPUR"
+      },
+      {
+        "blockCode": "210108",
+        "blockName": "GAISILET"
+      },
+      {
+        "blockCode": "210109",
+        "blockName": "JHARBANDH"
+      },
+      {
+        "blockCode": "210110",
+        "blockName": "PAIKMAL"
+      },
+      {
+        "blockCode": "210111",
+        "blockName": "RAJBORASAMBAR"
+      },
+      {
+        "blockCode": "210112",
+        "blockName": "SOHELLA"
+      }
+    ]
+  },
+  {
+    "districtCode": "2102",
+    "districtName": "JHARSUGUDA",
+    "blocks": [
+      {
+        "blockCode": "210201",
+        "blockName": "JHARSUGUDA"
+      },
+      {
+        "blockCode": "210202",
+        "blockName": "KIRMIRA"
+      },
+      {
+        "blockCode": "210203",
+        "blockName": "KOLABIRA"
+      },
+      {
+        "blockCode": "210204",
+        "blockName": "LAIKERA"
+      },
+      {
+        "blockCode": "210205",
+        "blockName": "LAKHANPUR"
+      }
+    ]
+  },
+  {
+    "districtCode": "2103",
+    "districtName": "SAMBALPUR",
+    "blocks": [
+      {
+        "blockCode": "210301",
+        "blockName": "BAMRA"
+      },
+      {
+        "blockCode": "210302",
+        "blockName": "DHANKAUDA"
+      },
+      {
+        "blockCode": "210303",
+        "blockName": "JAMANKIRA"
+      },
+      {
+        "blockCode": "210304",
+        "blockName": "JUJUMURA"
+      },
+      {
+        "blockCode": "210305",
+        "blockName": "KUCHINDA"
+      },
+      {
+        "blockCode": "210306",
+        "blockName": "MANESWAR"
+      },
+      {
+        "blockCode": "210307",
+        "blockName": "NAKTIDEUL"
+      },
+      {
+        "blockCode": "210308",
+        "blockName": "RAIRAKHOL"
+      },
+      {
+        "blockCode": "210309",
+        "blockName": "RENGALI"
+      }
+    ]
+  },
+  {
+    "districtCode": "2104",
+    "districtName": "DEOGARH",
+    "blocks": [
+      {
+        "blockCode": "210401",
+        "blockName": "BARKOTE"
+      },
+      {
+        "blockCode": "210402",
+        "blockName": "REAMAL"
+      },
+      {
+        "blockCode": "210403",
+        "blockName": "TILEIBANI"
+      }
+    ]
+  },
+  {
+    "districtCode": "2105",
+    "districtName": "SUNDERGARH",
+    "blocks": [
+      {
+        "blockCode": "210501",
+        "blockName": "BALISANKARA"
+      },
+      {
+        "blockCode": "210502",
+        "blockName": "BARGAON"
+      },
+      {
+        "blockCode": "210503",
+        "blockName": "BISRA"
+      },
+      {
+        "blockCode": "210504",
+        "blockName": "BONAI"
+      },
+      {
+        "blockCode": "210505",
+        "blockName": "GURUNDIA"
+      },
+      {
+        "blockCode": "210506",
+        "blockName": "HEMGIRI"
+      },
+      {
+        "blockCode": "210507",
+        "blockName": "KOIRA"
+      },
+      {
+        "blockCode": "210508",
+        "blockName": "KUARMUNDA"
+      },
+      {
+        "blockCode": "210509",
+        "blockName": "KUTRA"
+      },
+      {
+        "blockCode": "210510",
+        "blockName": "LAHUNIPARA"
+      },
+      {
+        "blockCode": "210511",
+        "blockName": "LATHIKATA"
+      },
+      {
+        "blockCode": "210512",
+        "blockName": "LEPHRIPARA"
+      },
+      {
+        "blockCode": "210513",
+        "blockName": "NUAGAON"
+      },
+      {
+        "blockCode": "210514",
+        "blockName": "RAJGANGPUR"
+      },
+      {
+        "blockCode": "210515",
+        "blockName": "SUBDEGA"
+      },
+      {
+        "blockCode": "210516",
+        "blockName": "SUNDARGARH"
+      },
+      {
+        "blockCode": "210517",
+        "blockName": "TANGARPALI"
+      }
+    ]
+  },
+  {
+    "districtCode": "2106",
+    "districtName": "KEONJHAR",
+    "blocks": [
+      {
+        "blockCode": "210601",
+        "blockName": "ANANDAPUR"
+      },
+      {
+        "blockCode": "210602",
+        "blockName": "BANSPAL"
+      },
+      {
+        "blockCode": "210603",
+        "blockName": "CHAMPUA"
+      },
+      {
+        "blockCode": "210604",
+        "blockName": "GHASIPURA"
+      },
+      {
+        "blockCode": "210605",
+        "blockName": "GHATAGAON"
+      },
+      {
+        "blockCode": "210606",
+        "blockName": "HARICHANDANPUR"
+      },
+      {
+        "blockCode": "210607",
+        "blockName": "HATADIHI"
+      },
+      {
+        "blockCode": "210608",
+        "blockName": "JHUMPURA"
+      },
+      {
+        "blockCode": "210609",
+        "blockName": "JODA"
+      },
+      {
+        "blockCode": "210610",
+        "blockName": "KEONJHAR"
+      },
+      {
+        "blockCode": "210611",
+        "blockName": "PATNA"
+      },
+      {
+        "blockCode": "210612",
+        "blockName": "SAHARAPADA"
+      },
+      {
+        "blockCode": "210613",
+        "blockName": "TELKOI"
+      }
+    ]
+  },
+  {
+    "districtCode": "2107",
+    "districtName": "MAYURBHANJ",
+    "blocks": [
+      {
+        "blockCode": "210701",
+        "blockName": "BAHALDA"
+      },
+      {
+        "blockCode": "210702",
+        "blockName": "BANGRIPOSI"
+      },
+      {
+        "blockCode": "210703",
+        "blockName": "BARASAHI"
+      },
+      {
+        "blockCode": "210704",
+        "blockName": "BARIPADA"
+      },
+      {
+        "blockCode": "210705",
+        "blockName": "BETNOTI"
+      },
+      {
+        "blockCode": "210706",
+        "blockName": "BIJATOLA"
+      },
+      {
+        "blockCode": "210707",
+        "blockName": "BISOI"
+      },
+      {
+        "blockCode": "210708",
+        "blockName": "G B NAGAR"
+      },
+      {
+        "blockCode": "210709",
+        "blockName": "JAMDA"
+      },
+      {
+        "blockCode": "210710",
+        "blockName": "JASHIPUR"
+      },
+      {
+        "blockCode": "210711",
+        "blockName": "KAPTIPADA"
+      },
+      {
+        "blockCode": "210712",
+        "blockName": "KARANJIA"
+      },
+      {
+        "blockCode": "210713",
+        "blockName": "KHUNTA"
+      },
+      {
+        "blockCode": "210714",
+        "blockName": "KULIANA"
+      },
+      {
+        "blockCode": "210715",
+        "blockName": "KUSUMI"
+      },
+      {
+        "blockCode": "210716",
+        "blockName": "MORADA"
+      },
+      {
+        "blockCode": "210717",
+        "blockName": "RAIRANGPUR"
+      },
+      {
+        "blockCode": "210718",
+        "blockName": "RARUAN"
+      },
+      {
+        "blockCode": "210719",
+        "blockName": "RASGOVINDPUR"
+      },
+      {
+        "blockCode": "210720",
+        "blockName": "SHAMAKHUNTA"
+      },
+      {
+        "blockCode": "210721",
+        "blockName": "SARASKANA"
+      },
+      {
+        "blockCode": "210722",
+        "blockName": "SUKRULI"
+      },
+      {
+        "blockCode": "210723",
+        "blockName": "SULIAPADA"
+      },
+      {
+        "blockCode": "210724",
+        "blockName": "THAKURMUNDA"
+      },
+      {
+        "blockCode": "210725",
+        "blockName": "TIRING"
+      },
+      {
+        "blockCode": "210726",
+        "blockName": "UDALA"
+      }
+    ]
+  },
+  {
+    "districtCode": "2108",
+    "districtName": "BALASORE",
+    "blocks": [
+      {
+        "blockCode": "210801",
+        "blockName": "BAHANAGA"
+      },
+      {
+        "blockCode": "210802",
+        "blockName": "BALIAPAL"
+      },
+      {
+        "blockCode": "210803",
+        "blockName": "BASTA"
+      },
+      {
+        "blockCode": "210804",
+        "blockName": "BHOGARAI"
+      },
+      {
+        "blockCode": "210805",
+        "blockName": "JALESWAR"
+      },
+      {
+        "blockCode": "210806",
+        "blockName": "KHAIRA"
+      },
+      {
+        "blockCode": "210807",
+        "blockName": "NILGIRI"
+      },
+      {
+        "blockCode": "210808",
+        "blockName": "OUPADA"
+      },
+      {
+        "blockCode": "210809",
+        "blockName": "REMUNA"
+      },
+      {
+        "blockCode": "210810",
+        "blockName": "SADAR"
+      },
+      {
+        "blockCode": "210811",
+        "blockName": "SIMULIA"
+      },
+      {
+        "blockCode": "210812",
+        "blockName": "SORO"
+      }
+    ]
+  },
+  {
+    "districtCode": "2109",
+    "districtName": "BHADRAK",
+    "blocks": [
+      {
+        "blockCode": "210901",
+        "blockName": "BASUDEVPUR"
+      },
+      {
+        "blockCode": "210902",
+        "blockName": "BHADRAK"
+      },
+      {
+        "blockCode": "210903",
+        "blockName": "BHANDARIPOKHARI"
+      },
+      {
+        "blockCode": "210904",
+        "blockName": "BONTH"
+      },
+      {
+        "blockCode": "210905",
+        "blockName": "CHANDABALI"
+      },
+      {
+        "blockCode": "210906",
+        "blockName": "DHAMNAGAR"
+      },
+      {
+        "blockCode": "210907",
+        "blockName": "TIHIDI"
+      }
+    ]
+  },
+  {
+    "districtCode": "2110",
+    "districtName": "KENDRAPARA",
+    "blocks": [
+      {
+        "blockCode": "211001",
+        "blockName": "AUL"
+      },
+      {
+        "blockCode": "211002",
+        "blockName": "DERABISH"
+      },
+      {
+        "blockCode": "211003",
+        "blockName": "GARADAPUR"
+      },
+      {
+        "blockCode": "211004",
+        "blockName": "KENDRAPARA"
+      },
+      {
+        "blockCode": "211005",
+        "blockName": "MAHAKALPARA"
+      },
+      {
+        "blockCode": "211006",
+        "blockName": "MARSHAGHAI"
+      },
+      {
+        "blockCode": "211007",
+        "blockName": "PATTAMUNDAI"
+      },
+      {
+        "blockCode": "211008",
+        "blockName": "RAJKANIKA"
+      },
+      {
+        "blockCode": "211009",
+        "blockName": "RAJNAGAR"
+      }
+    ]
+  },
+  {
+    "districtCode": "2111",
+    "districtName": "JAGATSINGHPUR",
+    "blocks": [
+      {
+        "blockCode": "211101",
+        "blockName": "BALIKUDA"
+      },
+      {
+        "blockCode": "211102",
+        "blockName": "BIRIDI"
+      },
+      {
+        "blockCode": "211103",
+        "blockName": "ERASAMA"
+      },
+      {
+        "blockCode": "211104",
+        "blockName": "JAGATSINGHPUR"
+      },
+      {
+        "blockCode": "211105",
+        "blockName": "KUJANG"
+      },
+      {
+        "blockCode": "211106",
+        "blockName": "NAUGAON"
+      },
+      {
+        "blockCode": "211107",
+        "blockName": "RAGHUNATHPUR"
+      },
+      {
+        "blockCode": "211108",
+        "blockName": "TIRTOL"
+      }
+    ]
+  },
+  {
+    "districtCode": "2112",
+    "districtName": "CUTTACK",
+    "blocks": [
+      {
+        "blockCode": "211201",
+        "blockName": "ATHGARH"
+      },
+      {
+        "blockCode": "211202",
+        "blockName": "BANKI"
+      },
+      {
+        "blockCode": "211203",
+        "blockName": "BARAMBA"
+      },
+      {
+        "blockCode": "211204",
+        "blockName": "BARANGA"
+      },
+      {
+        "blockCode": "211205",
+        "blockName": "CUTTACK SADAR"
+      },
+      {
+        "blockCode": "211206",
+        "blockName": "DOMPARA"
+      },
+      {
+        "blockCode": "211207",
+        "blockName": "KANTAPARA"
+      },
+      {
+        "blockCode": "211208",
+        "blockName": "MAHANGA"
+      },
+      {
+        "blockCode": "211209",
+        "blockName": "NARSINGHPUR"
+      },
+      {
+        "blockCode": "211210",
+        "blockName": "NIALI"
+      },
+      {
+        "blockCode": "211211",
+        "blockName": "NISCHINTAKOILI"
+      },
+      {
+        "blockCode": "211212",
+        "blockName": "SALIPUR"
+      },
+      {
+        "blockCode": "211213",
+        "blockName": "TANGI"
+      },
+      {
+        "blockCode": "211214",
+        "blockName": "TIGIRIA"
+      },
+      {
+        "blockCode": "211218",
+        "blockName": "CUTTACK MC"
+      }
+    ]
+  },
+  {
+    "districtCode": "2113",
+    "districtName": "JAJPUR",
+    "blocks": [
+      {
+        "blockCode": "211301",
+        "blockName": "BARCHANA"
+      },
+      {
+        "blockCode": "211302",
+        "blockName": "BARI"
+      },
+      {
+        "blockCode": "211303",
+        "blockName": "BINJHARPUR"
+      },
+      {
+        "blockCode": "211304",
+        "blockName": "DANAGADI"
+      },
+      {
+        "blockCode": "211305",
+        "blockName": "DASARATHPUR"
+      },
+      {
+        "blockCode": "211306",
+        "blockName": "DHARMASALA"
+      },
+      {
+        "blockCode": "211307",
+        "blockName": "JAJPUR"
+      },
+      {
+        "blockCode": "211308",
+        "blockName": "KORAI"
+      },
+      {
+        "blockCode": "211309",
+        "blockName": "RASULPUR"
+      },
+      {
+        "blockCode": "211310",
+        "blockName": "SUKINDA"
+      }
+    ]
+  },
+  {
+    "districtCode": "2114",
+    "districtName": "DHENKANAL",
+    "blocks": [
+      {
+        "blockCode": "211401",
+        "blockName": "BHUBAN"
+      },
+      {
+        "blockCode": "211402",
+        "blockName": "DHENKANAL SADAR"
+      },
+      {
+        "blockCode": "211403",
+        "blockName": "GONDIA"
+      },
+      {
+        "blockCode": "211404",
+        "blockName": "HINDOL"
+      },
+      {
+        "blockCode": "211405",
+        "blockName": "KAMAKHYANAGAR"
+      },
+      {
+        "blockCode": "211406",
+        "blockName": "KANKADAHAD"
+      },
+      {
+        "blockCode": "211407",
+        "blockName": "ODAPADA"
+      },
+      {
+        "blockCode": "211408",
+        "blockName": "PARJANG"
+      }
+    ]
+  },
+  {
+    "districtCode": "2115",
+    "districtName": "ANGUL",
+    "blocks": [
+      {
+        "blockCode": "211501",
+        "blockName": "ANGUL"
+      },
+      {
+        "blockCode": "211502",
+        "blockName": "ATHAMALLIK"
+      },
+      {
+        "blockCode": "211503",
+        "blockName": "BANARPAL"
+      },
+      {
+        "blockCode": "211504",
+        "blockName": "CHHENDIPADA"
+      },
+      {
+        "blockCode": "211505",
+        "blockName": "KANIHA"
+      },
+      {
+        "blockCode": "211506",
+        "blockName": "KISHORENAGAR"
+      },
+      {
+        "blockCode": "211507",
+        "blockName": "PALLAHARA"
+      },
+      {
+        "blockCode": "211508",
+        "blockName": "TALCHER"
+      }
+    ]
+  },
+  {
+    "districtCode": "2116",
+    "districtName": "NAYAGARH",
+    "blocks": [
+      {
+        "blockCode": "211601",
+        "blockName": "BHAPUR"
+      },
+      {
+        "blockCode": "211602",
+        "blockName": "DASPALLA"
+      },
+      {
+        "blockCode": "211603",
+        "blockName": "GANIA"
+      },
+      {
+        "blockCode": "211604",
+        "blockName": "KHANDAPADA"
+      },
+      {
+        "blockCode": "211605",
+        "blockName": "NAYAGARH"
+      },
+      {
+        "blockCode": "211606",
+        "blockName": "NUAGAON"
+      },
+      {
+        "blockCode": "211607",
+        "blockName": "ODAGAON"
+      },
+      {
+        "blockCode": "211608",
+        "blockName": "RANPUR"
+      }
+    ]
+  },
+  {
+    "districtCode": "2117",
+    "districtName": "KHURDHA",
+    "blocks": [
+      {
+        "blockCode": "211701",
+        "blockName": "BALIANTA"
+      },
+      {
+        "blockCode": "211702",
+        "blockName": "BALIPATNA"
+      },
+      {
+        "blockCode": "211703",
+        "blockName": "BANAPUR"
+      },
+      {
+        "blockCode": "211704",
+        "blockName": "BEGUNIA"
+      },
+      {
+        "blockCode": "211705",
+        "blockName": "BHUBANESWAR"
+      },
+      {
+        "blockCode": "211706",
+        "blockName": "BOLGARH"
+      },
+      {
+        "blockCode": "211707",
+        "blockName": "CHILIKA"
+      },
+      {
+        "blockCode": "211708",
+        "blockName": "JATNI"
+      },
+      {
+        "blockCode": "211709",
+        "blockName": "KHORDHA"
+      },
+      {
+        "blockCode": "211710",
+        "blockName": "TANGI"
+      },
+      {
+        "blockCode": "211713",
+        "blockName": "BHUBANESWAR MC"
+      }
+    ]
+  },
+  {
+    "districtCode": "2118",
+    "districtName": "PURI",
+    "blocks": [
+      {
+        "blockCode": "211801",
+        "blockName": "ASTARANG"
+      },
+      {
+        "blockCode": "211802",
+        "blockName": "BRAHMAGIRI"
+      },
+      {
+        "blockCode": "211803",
+        "blockName": "DELANG"
+      },
+      {
+        "blockCode": "211804",
+        "blockName": "GOP"
+      },
+      {
+        "blockCode": "211805",
+        "blockName": "KAKATPUR"
+      },
+      {
+        "blockCode": "211806",
+        "blockName": "KANAS"
+      },
+      {
+        "blockCode": "211807",
+        "blockName": "KRUSHNAPRASAD"
+      },
+      {
+        "blockCode": "211808",
+        "blockName": "NIMAPARA"
+      },
+      {
+        "blockCode": "211809",
+        "blockName": "PIPILI"
+      },
+      {
+        "blockCode": "211810",
+        "blockName": "PURI SADAR"
+      },
+      {
+        "blockCode": "211811",
+        "blockName": "SATYABADI"
+      }
+    ]
+  },
+  {
+    "districtCode": "2119",
+    "districtName": "GANJAM",
+    "blocks": [
+      {
+        "blockCode": "211901",
+        "blockName": "ASKA"
+      },
+      {
+        "blockCode": "211902",
+        "blockName": "BEGUNIAPADA"
+      },
+      {
+        "blockCode": "211903",
+        "blockName": "BELLAGUNTHA"
+      },
+      {
+        "blockCode": "211904",
+        "blockName": "BHANJANAGAR"
+      },
+      {
+        "blockCode": "211905",
+        "blockName": "BUGUDA"
+      },
+      {
+        "blockCode": "211906",
+        "blockName": "CHATRAPUR"
+      },
+      {
+        "blockCode": "211907",
+        "blockName": "CHIKITI"
+      },
+      {
+        "blockCode": "211908",
+        "blockName": "DHARAKOTE"
+      },
+      {
+        "blockCode": "211909",
+        "blockName": "DIGAPAHANDI"
+      },
+      {
+        "blockCode": "211910",
+        "blockName": "GANJAM"
+      },
+      {
+        "blockCode": "211911",
+        "blockName": "HINJILICUT"
+      },
+      {
+        "blockCode": "211912",
+        "blockName": "JAGANATHPRASAD"
+      },
+      {
+        "blockCode": "211913",
+        "blockName": "KABISURYANAGAR"
+      },
+      {
+        "blockCode": "211914",
+        "blockName": "KHALLIKOTE"
+      },
+      {
+        "blockCode": "211915",
+        "blockName": "KUKUDAKHANDI"
+      },
+      {
+        "blockCode": "211916",
+        "blockName": "PATRAPUR"
+      },
+      {
+        "blockCode": "211917",
+        "blockName": "POLASARA"
+      },
+      {
+        "blockCode": "211918",
+        "blockName": "PURUSOTAMPUR"
+      },
+      {
+        "blockCode": "211919",
+        "blockName": "RANGEILUNDA"
+      },
+      {
+        "blockCode": "211920",
+        "blockName": "SANAKHEMUNDI"
+      },
+      {
+        "blockCode": "211921",
+        "blockName": "SHERAGADA"
+      },
+      {
+        "blockCode": "211922",
+        "blockName": "SURADA"
+      }
+    ]
+  },
+  {
+    "districtCode": "2120",
+    "districtName": "GAJAPATI",
+    "blocks": [
+      {
+        "blockCode": "212001",
+        "blockName": "GOSANI"
+      },
+      {
+        "blockCode": "212002",
+        "blockName": "GUMMA"
+      },
+      {
+        "blockCode": "212003",
+        "blockName": "KASHINAGAR"
+      },
+      {
+        "blockCode": "212004",
+        "blockName": "MOHANA"
+      },
+      {
+        "blockCode": "212005",
+        "blockName": "NUAGADA"
+      },
+      {
+        "blockCode": "212006",
+        "blockName": "RAYAGADA"
+      },
+      {
+        "blockCode": "212007",
+        "blockName": "R.UDAYAGIRI"
+      }
+    ]
+  },
+  {
+    "districtCode": "2121",
+    "districtName": "KANDHAMAL",
+    "blocks": [
+      {
+        "blockCode": "212101",
+        "blockName": "BALLIGUDA"
+      },
+      {
+        "blockCode": "212102",
+        "blockName": "CHAKAPAD"
+      },
+      {
+        "blockCode": "212103",
+        "blockName": "DARINGBADI"
+      },
+      {
+        "blockCode": "212104",
+        "blockName": "G.UDAYAGIRI"
+      },
+      {
+        "blockCode": "212105",
+        "blockName": "K.NUAGAM"
+      },
+      {
+        "blockCode": "212106",
+        "blockName": "KHAJURIPADA"
+      },
+      {
+        "blockCode": "212107",
+        "blockName": "KOTAGHAR"
+      },
+      {
+        "blockCode": "212108",
+        "blockName": "PHIRINGIA"
+      },
+      {
+        "blockCode": "212109",
+        "blockName": "PHULBANI"
+      },
+      {
+        "blockCode": "212110",
+        "blockName": "RAIKIA"
+      },
+      {
+        "blockCode": "212111",
+        "blockName": "TIKABALI"
+      },
+      {
+        "blockCode": "212112",
+        "blockName": "TUMUDIBANDHA"
+      }
+    ]
+  },
+  {
+    "districtCode": "2122",
+    "districtName": "BOUDH",
+    "blocks": [
+      {
+        "blockCode": "212201",
+        "blockName": "BOUDH"
+      },
+      {
+        "blockCode": "212202",
+        "blockName": "HARABHANGA"
+      },
+      {
+        "blockCode": "212203",
+        "blockName": "KANTAMAL"
+      }
+    ]
+  },
+  {
+    "districtCode": "2123",
+    "districtName": "SONEPUR",
+    "blocks": [
+      {
+        "blockCode": "212301",
+        "blockName": "BINKA"
+      },
+      {
+        "blockCode": "212302",
+        "blockName": "BIRMAHARAJPUR"
+      },
+      {
+        "blockCode": "212303",
+        "blockName": "DUNGURIPALI"
+      },
+      {
+        "blockCode": "212304",
+        "blockName": "SONEPUR"
+      },
+      {
+        "blockCode": "212305",
+        "blockName": "TARVA"
+      },
+      {
+        "blockCode": "212306",
+        "blockName": "ULLUNDA"
+      }
+    ]
+  },
+  {
+    "districtCode": "2124",
+    "districtName": "BOLANGIR",
+    "blocks": [
+      {
+        "blockCode": "212401",
+        "blockName": "AGALPUR"
+      },
+      {
+        "blockCode": "212402",
+        "blockName": "BALANGIR"
+      },
+      {
+        "blockCode": "212403",
+        "blockName": "BANGOMUNDA"
+      },
+      {
+        "blockCode": "212404",
+        "blockName": "BELPADA"
+      },
+      {
+        "blockCode": "212405",
+        "blockName": "DEOGAON"
+      },
+      {
+        "blockCode": "212406",
+        "blockName": "GUDVELA"
+      },
+      {
+        "blockCode": "212407",
+        "blockName": "KHAPRAKHOL"
+      },
+      {
+        "blockCode": "212408",
+        "blockName": "LOISINGHA"
+      },
+      {
+        "blockCode": "212409",
+        "blockName": "MURIBAHAL"
+      },
+      {
+        "blockCode": "212410",
+        "blockName": "PATNAGARH"
+      },
+      {
+        "blockCode": "212411",
+        "blockName": "PUINTALA"
+      },
+      {
+        "blockCode": "212412",
+        "blockName": "SAINTALA"
+      },
+      {
+        "blockCode": "212413",
+        "blockName": "TITILAGARH"
+      },
+      {
+        "blockCode": "212414",
+        "blockName": "TUREKELA"
+      }
+    ]
+  },
+  {
+    "districtCode": "2125",
+    "districtName": "NUAPADA",
+    "blocks": [
+      {
+        "blockCode": "212501",
+        "blockName": "BODEN"
+      },
+      {
+        "blockCode": "212502",
+        "blockName": "KHARIAR"
+      },
+      {
+        "blockCode": "212503",
+        "blockName": "KOMNA"
+      },
+      {
+        "blockCode": "212504",
+        "blockName": "NUAPADA"
+      },
+      {
+        "blockCode": "212505",
+        "blockName": "SINAPALI"
+      }
+    ]
+  },
+  {
+    "districtCode": "2126",
+    "districtName": "KALAHANDI",
+    "blocks": [
+      {
+        "blockCode": "212601",
+        "blockName": "BHAWANIPATNA"
+      },
+      {
+        "blockCode": "212602",
+        "blockName": "DHARAMGARH"
+      },
+      {
+        "blockCode": "212603",
+        "blockName": "GOLAMUNDA"
+      },
+      {
+        "blockCode": "212604",
+        "blockName": "JAIPATNA"
+      },
+      {
+        "blockCode": "212605",
+        "blockName": "JUNAGARH"
+      },
+      {
+        "blockCode": "212606",
+        "blockName": "KALAMPUR"
+      },
+      {
+        "blockCode": "212607",
+        "blockName": "KARLAMUNDA"
+      },
+      {
+        "blockCode": "212608",
+        "blockName": "KESINGA"
+      },
+      {
+        "blockCode": "212609",
+        "blockName": "KOKSARA"
+      },
+      {
+        "blockCode": "212610",
+        "blockName": "LANJIGARH"
+      },
+      {
+        "blockCode": "212611",
+        "blockName": "M.RAMPUR"
+      },
+      {
+        "blockCode": "212612",
+        "blockName": "NARLA"
+      },
+      {
+        "blockCode": "212613",
+        "blockName": "TH RAMPUR"
+      }
+    ]
+  },
+  {
+    "districtCode": "2127",
+    "districtName": "RAYAGADA",
+    "blocks": [
+      {
+        "blockCode": "212701",
+        "blockName": "BISSAMCUTTACK"
+      },
+      {
+        "blockCode": "212702",
+        "blockName": "CHANDRAPUR"
+      },
+      {
+        "blockCode": "212703",
+        "blockName": "GUDARI"
+      },
+      {
+        "blockCode": "212704",
+        "blockName": "GUNUPUR"
+      },
+      {
+        "blockCode": "212705",
+        "blockName": "K.SINGPUR"
+      },
+      {
+        "blockCode": "212706",
+        "blockName": "KASIPUR"
+      },
+      {
+        "blockCode": "212707",
+        "blockName": "KOLNARA"
+      },
+      {
+        "blockCode": "212708",
+        "blockName": "MUNIGUDA"
+      },
+      {
+        "blockCode": "212709",
+        "blockName": "PADAMPUR"
+      },
+      {
+        "blockCode": "212710",
+        "blockName": "RAMANAGUDA"
+      },
+      {
+        "blockCode": "212711",
+        "blockName": "RAYAGADA"
+      }
+    ]
+  },
+  {
+    "districtCode": "2128",
+    "districtName": "NABARANGPUR",
+    "blocks": [
+      {
+        "blockCode": "212801",
+        "blockName": "CHANDAHANDI"
+      },
+      {
+        "blockCode": "212802",
+        "blockName": "DABUGAM"
+      },
+      {
+        "blockCode": "212803",
+        "blockName": "JHARIGAM"
+      },
+      {
+        "blockCode": "212804",
+        "blockName": "KOSAGUMUDA"
+      },
+      {
+        "blockCode": "212805",
+        "blockName": "NABARANGPUR"
+      },
+      {
+        "blockCode": "212806",
+        "blockName": "NANDAHANDI"
+      },
+      {
+        "blockCode": "212807",
+        "blockName": "PAPADAHANDI"
+      },
+      {
+        "blockCode": "212808",
+        "blockName": "RAIGHAR"
+      },
+      {
+        "blockCode": "212809",
+        "blockName": "TENTULIKHUNTI"
+      },
+      {
+        "blockCode": "212810",
+        "blockName": "UMERKOTE"
+      }
+    ]
+  },
+  {
+    "districtCode": "2129",
+    "districtName": "KORAPUT",
+    "blocks": [
+      {
+        "blockCode": "212901",
+        "blockName": "BANDHUGAM"
+      },
+      {
+        "blockCode": "212902",
+        "blockName": "BOIPARIGUDA"
+      },
+      {
+        "blockCode": "212903",
+        "blockName": "BORIGUMMA"
+      },
+      {
+        "blockCode": "212904",
+        "blockName": "DASMANTPUR"
+      },
+      {
+        "blockCode": "212905",
+        "blockName": "JEYPORE"
+      },
+      {
+        "blockCode": "212906",
+        "blockName": "KORAPUT"
+      },
+      {
+        "blockCode": "212907",
+        "blockName": "KOTPAD"
+      },
+      {
+        "blockCode": "212908",
+        "blockName": "KUNDRA"
+      },
+      {
+        "blockCode": "212909",
+        "blockName": "LAMTAPUT"
+      },
+      {
+        "blockCode": "212910",
+        "blockName": "LAXMIPUR"
+      },
+      {
+        "blockCode": "212911",
+        "blockName": "NANDAPUR"
+      },
+      {
+        "blockCode": "212912",
+        "blockName": "NARAYANAPATNA"
+      },
+      {
+        "blockCode": "212913",
+        "blockName": "POTTANGI"
+      },
+      {
+        "blockCode": "212914",
+        "blockName": "SEMILIGUDA"
+      }
+    ]
+  },
+  {
+    "districtCode": "2130",
+    "districtName": "MALKANGIRI",
+    "blocks": [
+      {
+        "blockCode": "213001",
+        "blockName": "KALIMELA"
+      },
+      {
+        "blockCode": "213002",
+        "blockName": "KHAIRPUT"
+      },
+      {
+        "blockCode": "213003",
+        "blockName": "KORUKONDA"
+      },
+      {
+        "blockCode": "213005",
+        "blockName": "MALKANGIRI"
+      },
+      {
+        "blockCode": "213006",
+        "blockName": "MATHILI"
+      },
+      {
+        "blockCode": "213007",
+        "blockName": "PODIA"
+      },
+      {
+        "blockCode": "213010",
+        "blockName": "CHITRAKONDA"
+      }
+    ]
+  }
+]
