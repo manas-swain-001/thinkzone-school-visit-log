@@ -95,7 +95,7 @@ export default function SettingsScreen() {
             autoCapitalize="none"
             autoCorrect={false}
             keyboardType="url"
-            placeholder="http://10.155.78.54:3000"
+            placeholder="http://192.168.1.131:3000"
             placeholderTextColor={colors.textFaint}
           />
           <Text style={styles.hint}>

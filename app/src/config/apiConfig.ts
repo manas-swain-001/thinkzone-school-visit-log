@@ -12,7 +12,7 @@ import { readJson, writeJson, StorageKeys } from '@/storage/kv';
  */
 const BUNDLED_DEFAULT = process.env.EXPO_PUBLIC_API_BASE_URL?.trim() || '';
 
-let current = normalise(BUNDLED_DEFAULT) || 'http://10.155.78.54:3000';
+let current = normalise(BUNDLED_DEFAULT) || 'http://192.168.1.131:3000';
 let loaded = false;
 
 export function getApiBaseUrl(): string {
