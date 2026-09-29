@@ -66,13 +66,24 @@ mongorestore --gzip --archive=dump/visit_log.archive.gz --drop
 
 ### App
 
-<!-- TODO(frontend): exact commands, Expo SDK version, and how the phone
-     reaches the API. Needed before this README is hand-in ready. -->
+Built with **Expo SDK 57** and **Expo Router** (React Native 0.86 / React 19).
+
+```bash
+cd app
+npm install
+npm start                     # starts Metro bundler on http://localhost:8081
+```
+
+- Run on **Android emulator**: press `a` in the terminal.
+- Run on **Physical device**: install **Expo Go**, ensure the phone and laptop are on the same Wi-Fi, and scan the QR code or enter `exp://<YOUR_LAN_IP>:8081`.
+- **Connecting to the API**:
+  The app reads `EXPO_PUBLIC_API_BASE_URL` from `app/.env` (template in `.env.example`). You can also test and override the API address at runtime directly inside the app under **Settings -> API address**.
 
 ### Tests
 
 ```bash
 cd server && npm test         # 34 tests, no database required
+cd ../app && npm run typecheck # TypeScript checks
 ```
 
 ---
@@ -204,7 +215,6 @@ Where the brief left something open, this is what was chosen:
 
 ## 6. Not finished / known gaps
 
-- <!-- TODO(frontend): fill in as the app is built. -->
 - The report's district total computes `uniqueVisitors` with its own group
   rather than by summing the per-block rows. That is deliberate: a user who
   visits two blocks must count once, and per-block counts cannot be summed.
